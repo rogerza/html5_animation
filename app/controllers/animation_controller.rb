@@ -5,4 +5,7 @@ class AnimationController < ApplicationController
   def basic
   end
 
+  def shapes
+  end
+
 end
