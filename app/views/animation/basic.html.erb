@@ -1,0 +1,29 @@
+<script type="application/javascript">
+
+  function draw(){
+    console.log("Drawing");
+    var canvas = document.getElementById('tutorial');
+    if (canvas.getContext){
+      console.log("got context");
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = "rgb(200,0,0)";
+      ctx.fillRect( 10, 10, 55, 50 );
+
+      ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+      ctx.fillRect( 30, 30, 55, 50 );
+    }
+  }
+</script>
+
+<style type="text/css">
+  canvas { border: 1px solid black; }
+</style>
+
+<% width = '150' %>
+<% height = '150' %>
+<body onload="draw();">
+<p>This is your canvas at width: <%= width%> and height <%= height %></p>
+<div>
+<canvas id="tutorial" width="<%= width %>" height="<%= height%>"></canvas>
+</div>
+</body>
